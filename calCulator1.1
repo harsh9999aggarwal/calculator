@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mini_calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>MINI CALCULATOR</h1>
+  <div  container="fluid">
+      
+<p></p>
+<input type="text" id="inpo">
+<p id="1"></p>
+<input type="text" id="inpo1">
+<br/>
+<br/>
+<button id="bt" onclick = "document.getElementById('h').value=add(we(),we1())" >+</button>
+<button  id="bt" onclick = "document.getElementById('h').value=sub(we(),we1())" >-</button><br/>
+<button id="bt" onclick = "document.getElementById('h').value=mul(we(),we1())" >*</button>
+<button  id="bt" onclick = "document.getElementById('h').value=div(we(),we1())" >%</button><br/>
+<button  id="bt" onclick = clr() >C</button>
+
+<script>
+function we() {
+var c = document.getElementById("inpo").value;
+return parseFloat(c);
+}
+function we1() {
+var c1 = document.getElementById("inpo1").value;
+return parseFloat(c1);
+}
+function sub(p, q)
+{
+  return p-q;
+}
+function add(p,q)
+{
+return p+q;
+}
+function mul(p, q)
+{
+  return p*q;
+}
+function div(p,q)
+{
+  return p/q;
+}
+function clr()
+{
+  document.getElementById('inpo').value = '';
+  document.getElementById('inpo1').value = '';
+  document.getElementById('h').value = '';
+}
+ function voice()
+{
+  var audio =   document.getElementById("audio");
+  audio.play();
+}
+</script>
+<p>
+ = <input id="h"></p>
+</div>
+
+</body>
+</html>
